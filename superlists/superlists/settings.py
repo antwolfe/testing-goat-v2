@@ -53,10 +53,12 @@ MIDDLEWARE = [
 ]
 
 CSRF_TRUSTED_ORIGINS = [
-    "https://muddylists.ignorelist.com",
-    "http://muddylists.ignorelist.com",
-    "https://muddylists-staging.ignorelist.com",
+    "http://3.83.224.195",
+    "http://ec2-3-83-224-195.compute-1.amazonaws.com",
     "http://muddylists-staging.ignorelist.com",
+    "http://muddylists.ignorelist.com",
+    "https://muddylists.ignorelist.com",
+    "https://muddylists-staging.ignorelist.com",
 ]
 
 ROOT_URLCONF = "superlists.urls"
