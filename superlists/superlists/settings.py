@@ -40,9 +40,7 @@ CSRF_TRUSTED_ORIGINS = [
     "https://muddylists-staged.ignorelist.com",
     "http://muddylists-staged.ignorelist.com",
 ]
-CSRF_COOKIE_SECURE = False         # Only send cookie over HTTPS
-CSRF_COOKIE_SAMESITE = 'Lax'      # Limit cross-site sending
-CSRF_COOKIE_HTTPONLY = False      # If you access token via JavaScript
+CSRF_COOKIE_HTTPONLY = True      # If you access token via JavaScript
 
 
 INSTALLED_APPS = [
