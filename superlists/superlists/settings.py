@@ -26,22 +26,26 @@ SECRET_KEY = "django-insecure-fpu)h0p09rrijhc%6)bmv&v)hi-02!!wejvnnp&lq(w#-megg8
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
-
-
-# Application definition
-CSRF_COOKIE_NAME = "csrftoken"
-CSRF_HEADER_NAME = "HTTP_X_CSRFTOKEN"
-CSRF_TRUSTED_ORIGINS = [
+ALLOWED_HOSTS = [
     "http://54.227.146.69",
     "http://ec2-54-227-146-69.compute-1.amazonaws.com",
     "https://muddylists.ignorelist.com",
     "http://muddylists.ignorelist.com",
     "https://muddylists-staged.ignorelist.com",
     "http://muddylists-staged.ignorelist.com",
+    ".localhost",
+    "127.0.0.1",
+    "[::1]",
 ]
-CSRF_COOKIE_HTTPONLY = True      # If you access token via JavaScript
 
+
+# Application definition
+CSRF_TRUSTED_ORIGINS = [
+    "https://muddylists.ignorelist.com",
+    "http://muddylists.ignorelist.com",
+    "https://muddylists-staged.ignorelist.com",
+    "http://muddylists-staged.ignorelist.com",
+]
 
 INSTALLED_APPS = [
     # 'django.contrib.admin',
