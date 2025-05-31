@@ -27,10 +27,13 @@ SECRET_KEY = "django-insecure-fpu)h0p09rrijhc%6)bmv&v)hi-02!!wejvnnp&lq(w#-megg8
 DEBUG = True
 
 ALLOWED_HOSTS = [
-    # "https://muddylists.ignorelist.com",
-    # "http://muddylists.ignorelist.com",
-    # "https://muddylists-staged.ignorelist.com",
-    # "http://muddylists-staged.ignorelist.com",
+    "https://muddylists.ignorelist.com",
+    "http://muddylists.ignorelist.com",
+    "https://muddylists-staged.ignorelist.com",
+    "http://muddylists-staged.ignorelist.com",
+    ".localhost",
+    "127.0.0.1",
+    "[::1]",
 ]
 
 
