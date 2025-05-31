@@ -26,17 +26,7 @@ SECRET_KEY = "django-insecure-fpu)h0p09rrijhc%6)bmv&v)hi-02!!wejvnnp&lq(w#-megg8
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = [
-    "http://54.227.146.69",
-    "http://ec2-54-227-146-69.compute-1.amazonaws.com",
-    "https://muddylists.ignorelist.com",
-    "http://muddylists.ignorelist.com",
-    "https://muddylists-staged.ignorelist.com",
-    "http://muddylists-staged.ignorelist.com",
-    ".localhost",
-    "127.0.0.1",
-    "[::1]",
-]
+ALLOWED_HOSTS = []
 
 
 # Application definition
@@ -65,8 +55,8 @@ MIDDLEWARE = [
 CSRF_TRUSTED_ORIGINS = [
     "https://muddylists.ignorelist.com",
     "http://muddylists.ignorelist.com",
-    "https://muddylists-staged.ignorelist.com",
-    "http://muddylists-staged.ignorelist.com",
+    "https://muddylists-staging.ignorelist.com",
+    "http://muddylists-staging.ignorelist.com",
 ]
 
 ROOT_URLCONF = "superlists.urls"
