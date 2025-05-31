@@ -51,7 +51,7 @@ MIDDLEWARE = [
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
 ]
 
-CRSF_TRUSTED_ORIGINS = [
+CSRF_TRUSTED_ORIGINS = [
     "https://muddylists.ignorelist.com",
     "http://muddylists.ignorelist.com",
     "https://muddylists-staged.ignorelist.com",
