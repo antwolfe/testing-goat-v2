@@ -52,6 +52,8 @@ MIDDLEWARE = [
 ]
 
 CSRF_TRUSTED_ORIGINS = [
+    "http://54.227.146.69",
+    "http://ec2-54-227-146-69.compute-1.amazonaws.com",
     "https://muddylists.ignorelist.com",
     "http://muddylists.ignorelist.com",
     "https://muddylists-staged.ignorelist.com",
