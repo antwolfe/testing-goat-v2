@@ -40,12 +40,7 @@ ALLOWED_HOSTS = [
 
 
 # Application definition
-CSRF_TRUSTED_ORIGINS = [
-    "https://muddylists.ignorelist.com",
-    "http://muddylists.ignorelist.com",
-    "https://muddylists-staged.ignorelist.com",
-    "http://muddylists-staged.ignorelist.com",
-]
+
 
 INSTALLED_APPS = [
     # 'django.contrib.admin',
@@ -67,6 +62,12 @@ MIDDLEWARE = [
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
 ]
 
+CSRF_TRUSTED_ORIGINS = [
+    "https://muddylists.ignorelist.com",
+    "http://muddylists.ignorelist.com",
+    "https://muddylists-staged.ignorelist.com",
+    "http://muddylists-staged.ignorelist.com",
+]
 
 ROOT_URLCONF = "superlists.urls"
 
