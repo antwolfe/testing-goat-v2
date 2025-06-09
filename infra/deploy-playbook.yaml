@@ -11,18 +11,47 @@
 
     - name: Add our user to the docker group, so we don't need to sudo/become
       ansible.builtin.user:
-        name: '{{ anthony }}'
+        name: anthony
         groups: docker
         append: true
-      become: true
 
     - name: Reset ssh connection to allow the use/group change to take effect
       ansible.builtin.meta: reset_connection
 
-    - name: Run test container
+    - name: Build container image locally
+      community.docker.docker_image:
+        name: muddylists
+        source:  build
+        state: present
+        build:
+          path: ..
+          platform: linux/amd64
+        force_source: true
+      delegate_to: 127.0.0.1
+      
+    - name: Export container image locally
+      community.docker.docker_image:
+        name: muddylists
+        archive_path: /tmp/superlists-img.tar
+        source: local
+      delegate_to: 127.0.0.1
+
+    - name: Upload image to server
+      ansible.builtin.copy:
+        src: /tmp/superlists-img.tar
+        dest: /tmp/muddylists-img.tar
+
+    - name: Import container image on server
+      community.docker.docker_image:
+        name: muddylists
+        load_path: /tmp/muddylists-img.tar
+        source: load
+        force_source: true
+        state: present
+
+    - name: Run container
       community.docker.docker_container:
-        name: testcontainer
+        name: muddylists
+        image: muddylists
         state: started
-        image: busybox
-        command: echo hello world
-      become: true
+        recreate: true

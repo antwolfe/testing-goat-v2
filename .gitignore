@@ -3,3 +3,4 @@ src/db.sqlite3
 /static
 src/static
 container.db.sqlite3
+./.venv-wsl
